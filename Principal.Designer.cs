@@ -32,6 +32,7 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.btnCal = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnMonthView = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -61,7 +62,7 @@
             // 
             this.btnCal.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCal.Location = new System.Drawing.Point(49, 77);
+            this.btnCal.Location = new System.Drawing.Point(518, 192);
             this.btnCal.Name = "btnCal";
             this.btnCal.Size = new System.Drawing.Size(94, 52);
             this.btnCal.TabIndex = 2;
@@ -81,6 +82,18 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
+            // btnMonthView
+            // 
+            this.btnMonthView.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnMonthView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMonthView.Location = new System.Drawing.Point(202, 192);
+            this.btnMonthView.Name = "btnMonthView";
+            this.btnMonthView.Size = new System.Drawing.Size(94, 52);
+            this.btnMonthView.TabIndex = 4;
+            this.btnMonthView.Text = "Show Month";
+            this.btnMonthView.UseVisualStyleBackColor = false;
+            this.btnMonthView.Click += new System.EventHandler(this.BtnMonthView_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -88,6 +101,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.btnMonthView);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCal);
             this.Controls.Add(this.lblDate);
@@ -107,6 +121,7 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Button btnCal;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnMonthView;
     }
 }
 

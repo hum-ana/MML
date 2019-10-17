@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MML.Money;
+using System;
 using System.Windows.Forms;
 
 namespace MML
@@ -8,7 +9,7 @@ namespace MML
 
         public void getDate()
         {
-            string dateNow = "";
+            string dateNow;
             dateNow = DateTime.Now.Month + "/";
             dateNow += DateTime.Now.Day + "/";
             dateNow += DateTime.Now.Year + "";
@@ -35,6 +36,12 @@ namespace MML
         private void BtnExit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void BtnMonthView_Click(object sender, EventArgs e)
+        {
+            MonthView f = new MonthView();
+            f.Show(this);
         }
     }
 }
