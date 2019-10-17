@@ -59,22 +59,26 @@
             // 
             // btnCal
             // 
-            this.btnCal.Location = new System.Drawing.Point(58, 95);
+            this.btnCal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCal.Location = new System.Drawing.Point(49, 77);
             this.btnCal.Name = "btnCal";
-            this.btnCal.Size = new System.Drawing.Size(130, 23);
+            this.btnCal.Size = new System.Drawing.Size(94, 52);
             this.btnCal.TabIndex = 2;
             this.btnCal.Text = "Show Calendar";
-            this.btnCal.UseVisualStyleBackColor = true;
+            this.btnCal.UseVisualStyleBackColor = false;
             this.btnCal.Click += new System.EventHandler(this.BtnCal_Click);
             // 
             // btnExit
             // 
+            this.btnExit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Location = new System.Drawing.Point(754, 9);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(34, 23);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // Principal
