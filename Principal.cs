@@ -10,9 +10,7 @@ namespace MML
         public void getDate()
         {
             string dateNow;
-            dateNow = DateTime.Now.Month + "/";
-            dateNow += DateTime.Now.Day + "/";
-            dateNow += DateTime.Now.Year + "";
+            dateNow = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year + "";
             lblDate.Text = dateNow;
         }
 

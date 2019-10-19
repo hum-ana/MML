@@ -1,6 +1,6 @@
 ﻿namespace MML.Money
 {
-    public class Expenses
+    public class Income
     {
         private string name;
         public string Name
@@ -30,14 +30,9 @@
 
         public enum Categories
         {
-            Transport,
-            Groceries,
-            Clothes,
+            Work,
             Family,
-            Entertainment,
-            Friends,
-            Health,
-            ME
+            Friends
         }
 
         public Categories category { get; set; }
@@ -55,7 +50,7 @@
             }
         }
 
-        public Expenses(string name, double price, Categories category, string date)
+        public Income(string name, double price, Categories category, string date)
         {
             this.name = name;
             this.price = price;

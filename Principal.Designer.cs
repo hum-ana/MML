@@ -37,14 +37,16 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Location = new System.Drawing.Point(195, 9);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(417, 41);
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label1.Size = new System.Drawing.Size(800, 450);
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Money and Life";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblDate
             // 
@@ -73,6 +75,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Location = new System.Drawing.Point(754, 9);
             this.btnExit.Name = "btnExit";
@@ -99,6 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.btnMonthView);

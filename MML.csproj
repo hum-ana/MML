@@ -52,7 +52,20 @@
     <Compile Include="Life\Calendar.Designer.cs">
       <DependentUpon>Calendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Money\AddExpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Money\AddExpenses.Designer.cs">
+      <DependentUpon>AddExpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Money\AddIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Money\AddIncome.Designer.cs">
+      <DependentUpon>AddIncome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Money\Expenses.cs" />
+    <Compile Include="Money\Income.cs" />
     <Compile Include="Money\MonthView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +82,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Life\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Money\AddExpenses.resx">
+      <DependentUpon>AddExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Money\AddIncome.resx">
+      <DependentUpon>AddIncome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Money\MonthView.resx">
       <DependentUpon>MonthView.cs</DependentUpon>
