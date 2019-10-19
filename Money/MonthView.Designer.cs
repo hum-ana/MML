@@ -35,6 +35,8 @@
             this.lblTotalExpenses = new System.Windows.Forms.Label();
             this.btnIncome = new System.Windows.Forms.Button();
             this.lblTotalIncome = new System.Windows.Forms.Label();
+            this.lblBalanceMonth = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblMonth
@@ -64,6 +66,7 @@
             // 
             // btnNextMonth
             // 
+            this.btnNextMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNextMonth.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnNextMonth.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNextMonth.Location = new System.Drawing.Point(547, 12);
@@ -76,6 +79,7 @@
             // 
             // btnExpenses
             // 
+            this.btnExpenses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnExpenses.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExpenses.Location = new System.Drawing.Point(12, 249);
@@ -88,6 +92,9 @@
             // 
             // lblTotalExpenses
             // 
+            this.lblTotalExpenses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotalExpenses.AutoSize = true;
             this.lblTotalExpenses.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalExpenses.ForeColor = System.Drawing.Color.Brown;
@@ -100,6 +107,7 @@
             // 
             // btnIncome
             // 
+            this.btnIncome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIncome.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnIncome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIncome.Location = new System.Drawing.Point(533, 249);
@@ -112,6 +120,9 @@
             // 
             // lblTotalIncome
             // 
+            this.lblTotalIncome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotalIncome.AutoSize = true;
             this.lblTotalIncome.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalIncome.ForeColor = System.Drawing.Color.LightGreen;
@@ -122,6 +133,34 @@
             this.lblTotalIncome.Text = "Total income: 0€";
             this.lblTotalIncome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblBalanceMonth
+            // 
+            this.lblBalanceMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBalanceMonth.AutoSize = true;
+            this.lblBalanceMonth.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBalanceMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblBalanceMonth.Location = new System.Drawing.Point(405, 149);
+            this.lblBalanceMonth.Name = "lblBalanceMonth";
+            this.lblBalanceMonth.Size = new System.Drawing.Size(90, 19);
+            this.lblBalanceMonth.TabIndex = 8;
+            this.lblBalanceMonth.Text = "Balance: ";
+            this.lblBalanceMonth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.Location = new System.Drawing.Point(268, 249);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(57, 28);
+            this.btnExit.TabIndex = 10;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
             // MonthView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,6 +168,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(605, 295);
             this.ControlBox = false;
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.lblBalanceMonth);
             this.Controls.Add(this.lblTotalIncome);
             this.Controls.Add(this.btnIncome);
             this.Controls.Add(this.lblTotalExpenses);
@@ -139,6 +180,7 @@
             this.Name = "MonthView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Activated += new System.EventHandler(this.MonthView_Activate);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MonthView_FormClosing);
             this.Load += new System.EventHandler(this.MonthView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -154,5 +196,7 @@
         private System.Windows.Forms.Label lblTotalExpenses;
         private System.Windows.Forms.Button btnIncome;
         private System.Windows.Forms.Label lblTotalIncome;
+        private System.Windows.Forms.Label lblBalanceMonth;
+        private System.Windows.Forms.Button btnExit;
     }
 }
