@@ -41,7 +41,7 @@ namespace MML.Money
                     lblExpenses.Location = new Point(40, y);
                     lblExpenses.Size = new Size(450, 20);
                     lblExpenses.BackColor = Color.FromArgb(40, 40, 40);
-                    lblExpenses.ForeColor = SystemColors.AppWorkspace;
+                    lblExpenses.ForeColor = SystemColors.ButtonFace;
                     lblExpenses.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                     lblExpenses.Text = exp.Date + "  " + exp.Name + "  " + exp.category + "  " + exp.Price + "€";
                     lblExpenses.Tag = exp;
@@ -60,7 +60,7 @@ namespace MML.Money
                     lblIncome.Location = new Point(550, y2);
                     lblIncome.Size = new Size(450, 20);
                     lblIncome.BackColor = Color.FromArgb(40, 40, 40);
-                    lblIncome.ForeColor = SystemColors.AppWorkspace;
+                    lblIncome.ForeColor = SystemColors.ButtonFace;
                     lblIncome.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                     lblIncome.Text = inc.Date + "  " + inc.Name + "  " + inc.category + "  " + inc.Price + "€";
                     lblIncome.Tag = inc;
@@ -74,8 +74,18 @@ namespace MML.Money
 
         void lblExpensesClick(object sender, EventArgs e)
         {
-            ((Label)sender).Font = new Font("Consolas", 12F, FontStyle.Strikeout, GraphicsUnit.Point, ((byte)(0)));
-            deleteExpenses.Add((Expenses)((Label)sender).Tag);
+            if (((Label)sender).ForeColor == SystemColors.ButtonFace)
+            {
+                ((Label)sender).ForeColor = SystemColors.AppWorkspace;
+                ((Label)sender).Font = new Font("Consolas", 12F, FontStyle.Strikeout, GraphicsUnit.Point, ((byte)(0)));
+                deleteExpenses.Add((Expenses)((Label)sender).Tag);
+            }
+            else
+            {
+                ((Label)sender).ForeColor = SystemColors.ButtonFace;
+                ((Label)sender).Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                deleteExpenses.Remove((Expenses)((Label)sender).Tag);
+            }
         }
 
         void DeleteExpenses()
@@ -91,8 +101,18 @@ namespace MML.Money
 
         void lblIncomeClick(object sender, EventArgs e)
         {
-            ((Label)sender).Font = new Font("Consolas", 12F, FontStyle.Strikeout, GraphicsUnit.Point, ((byte)(0)));
-            deleteIncome.Add((Income)((Label)sender).Tag);
+            if (((Label)sender).ForeColor == SystemColors.ButtonFace)
+            {
+                ((Label)sender).ForeColor = SystemColors.AppWorkspace;
+                ((Label)sender).Font = new Font("Consolas", 12F, FontStyle.Strikeout, GraphicsUnit.Point, ((byte)(0)));
+                deleteIncome.Add((Income)((Label)sender).Tag);
+            }
+            else
+            {
+                ((Label)sender).ForeColor = SystemColors.ButtonFace;
+                ((Label)sender).Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                deleteIncome.Remove((Income)((Label)sender).Tag);
+            }
         }
 
         void DeleteIncome()

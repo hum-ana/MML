@@ -107,10 +107,10 @@ namespace MML.Money
 
         public void getExpenses()
         {
+            MonthExpenses = 0;
+            lblTotalExpenses.Text = "Total expenses: " + MonthExpenses + "€";
             if (expens.Count > 0)
             {
-                MonthExpenses = 0;
-                lblTotalExpenses.Text = "Total expenses: " + MonthExpenses + "€";
                 foreach (Expenses exp in expens)
                 {
                     string result = exp.Date.Substring(exp.Date.IndexOf("/") + 1, (exp.Date.LastIndexOf("/")) - (exp.Date.IndexOf("/") + 1));
@@ -120,16 +120,16 @@ namespace MML.Money
                     }
                 }
                 lblTotalExpenses.Text = "Total expenses: " + MonthExpenses + "€";
-                getBalance();
             }
+            getBalance();
         }
 
         public void getIncome()
         {
+            MonthIncomes = 0;
+            lblTotalIncome.Text = "Total income: " + MonthIncomes + "€";
             if (incoms.Count > 0)
             {
-                MonthIncomes = 0;
-                lblTotalIncome.Text = "Total income: " + MonthExpenses + "€";
                 foreach (Income inc in incoms)
                 {
                     string result = inc.Date.Substring(inc.Date.IndexOf("/") + 1, (inc.Date.LastIndexOf("/")) - (inc.Date.IndexOf("/") + 1));
@@ -139,8 +139,8 @@ namespace MML.Money
                     }
                 }
                 lblTotalIncome.Text = "Total income: " + MonthIncomes + "€";
-                getBalance();
             }
+            getBalance();
         }
 
         public void getBalance()
