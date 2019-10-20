@@ -37,6 +37,7 @@
             this.lblTotalIncome = new System.Windows.Forms.Label();
             this.lblBalanceMonth = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnMonthData = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblMonth
@@ -161,6 +162,19 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
+            // btnMonthData
+            // 
+            this.btnMonthData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnMonthData.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnMonthData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMonthData.Location = new System.Drawing.Point(12, 142);
+            this.btnMonthData.Name = "btnMonthData";
+            this.btnMonthData.Size = new System.Drawing.Size(60, 34);
+            this.btnMonthData.TabIndex = 11;
+            this.btnMonthData.Text = "Month Data";
+            this.btnMonthData.UseVisualStyleBackColor = false;
+            this.btnMonthData.Click += new System.EventHandler(this.BtnMonthData_Click);
+            // 
             // MonthView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,6 +182,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(605, 295);
             this.ControlBox = false;
+            this.Controls.Add(this.btnMonthData);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblBalanceMonth);
             this.Controls.Add(this.lblTotalIncome);
@@ -198,5 +213,6 @@
         private System.Windows.Forms.Label lblTotalIncome;
         private System.Windows.Forms.Label lblBalanceMonth;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnMonthData;
     }
 }

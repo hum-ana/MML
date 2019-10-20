@@ -114,7 +114,7 @@ namespace MML.Money
                 foreach (Expenses exp in expens)
                 {
                     string result = exp.Date.Substring(exp.Date.IndexOf("/") + 1, (exp.Date.LastIndexOf("/")) - (exp.Date.IndexOf("/") + 1));
-                    if (result == MonthNow.ToString("00") && exp.Date.Substring(exp.Date.LastIndexOf("/")+1) == YearNow.ToString())
+                    if (result == MonthNow.ToString("00") && exp.Date.Substring(exp.Date.LastIndexOf("/") + 1) == YearNow.ToString())
                     {
                         MonthExpenses += exp.Price;
                     }
@@ -179,6 +179,33 @@ namespace MML.Money
             lblMonth.Text = DateNow;
             getExpenses();
             getIncome();
+        }
+
+        private void BtnMonthData_Click(object sender, EventArgs e)
+        {
+            if (expens.Count > 0 || incoms.Count > 0)
+            {
+                MonthData.thisExpenses = new List<Expenses>();
+                MonthData.thisIncome = new List<Income>();
+                foreach (Expenses exp in expens)
+                {
+                    string result = exp.Date.Substring(exp.Date.IndexOf("/") + 1, (exp.Date.LastIndexOf("/")) - (exp.Date.IndexOf("/") + 1));
+                    if (result == MonthNow.ToString("00") && exp.Date.Substring(exp.Date.LastIndexOf("/") + 1) == YearNow.ToString())
+                    {
+                        MonthData.thisExpenses.Add(exp);
+                    }
+                }
+                foreach (Income inc in incoms)
+                {
+                    string result = inc.Date.Substring(inc.Date.IndexOf("/") + 1, (inc.Date.LastIndexOf("/")) - (inc.Date.IndexOf("/") + 1));
+                    if (result == MonthNow.ToString("00") && inc.Date.Substring(inc.Date.LastIndexOf("/") + 1) == YearNow.ToString())
+                    {
+                        MonthData.thisIncome.Add(inc);
+                    }
+                }
+                MonthData md = new MonthData();
+                md.Show();
+            }
         }
 
         private void BtnExpenses_Click(object sender, EventArgs e)

@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="Money\Expenses.cs" />
     <Compile Include="Money\Income.cs" />
+    <Compile Include="Money\MonthData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Money\MonthData.Designer.cs">
+      <DependentUpon>MonthData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Money\MonthView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Money\AddIncome.resx">
       <DependentUpon>AddIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Money\MonthData.resx">
+      <DependentUpon>MonthData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Money\MonthView.resx">
       <DependentUpon>MonthView.cs</DependentUpon>
