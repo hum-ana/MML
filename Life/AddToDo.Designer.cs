@@ -1,6 +1,6 @@
-﻿namespace MML
+﻿namespace MML.Life
 {
-    partial class Calendar
+    partial class AddToDo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.monthCalendar = new System.Windows.Forms.MonthCalendar();
+            this.txtToDo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // monthCalendar
+            // txtToDo
             // 
-            this.monthCalendar.Location = new System.Drawing.Point(18, 18);
-            this.monthCalendar.Name = "monthCalendar";
-            this.monthCalendar.ShowTodayCircle = false;
-            this.monthCalendar.ShowWeekNumbers = true;
-            this.monthCalendar.TabIndex = 0;
+            this.txtToDo.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtToDo.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtToDo.Location = new System.Drawing.Point(4, 4);
+            this.txtToDo.Name = "txtToDo";
+            this.txtToDo.Size = new System.Drawing.Size(390, 20);
+            this.txtToDo.TabIndex = 0;
+            this.txtToDo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtToDo_KeyDown);
             // 
-            // Calendar
+            // AddToDo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(249, 196);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(398, 28);
             this.ControlBox = false;
-            this.Controls.Add(this.monthCalendar);
-            this.MaximumSize = new System.Drawing.Size(265, 212);
-            this.MinimumSize = new System.Drawing.Size(265, 212);
-            this.Name = "Calendar";
+            this.Controls.Add(this.txtToDo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(398, 28);
+            this.MinimumSize = new System.Drawing.Size(398, 28);
+            this.Name = "AddToDo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Deactivate += new System.EventHandler(this.Calendar_Deactivate);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        public System.Windows.Forms.MonthCalendar monthCalendar;
+        private System.Windows.Forms.TextBox txtToDo;
     }
 }

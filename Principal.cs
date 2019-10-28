@@ -1,4 +1,5 @@
-﻿using MML.Money;
+﻿using MML.Life;
+using MML.Money;
 using System;
 using System.Windows.Forms;
 
@@ -27,7 +28,7 @@ namespace MML
 
         private void BtnCal_Click(object sender, EventArgs e)
         {
-            Calendar f = new Calendar();
+            MonthWork f = new MonthWork();
             f.Show(this);
         }
 

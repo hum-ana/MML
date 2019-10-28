@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Life\Calendar.cs">
+    <Compile Include="Life\AddToDo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Life\Calendar.Designer.cs">
-      <DependentUpon>Calendar.cs</DependentUpon>
+    <Compile Include="Life\AddToDo.Designer.cs">
+      <DependentUpon>AddToDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Life\MonthWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Life\MonthWork.Designer.cs">
+      <DependentUpon>MonthWork.cs</DependentUpon>
     </Compile>
     <Compile Include="Money\AddExpenses.cs">
       <SubType>Form</SubType>
@@ -86,8 +92,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Life\Calendar.resx">
-      <DependentUpon>Calendar.cs</DependentUpon>
+    <EmbeddedResource Include="Life\AddToDo.resx">
+      <DependentUpon>AddToDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Life\MonthWork.resx">
+      <DependentUpon>MonthWork.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Money\AddExpenses.resx">
       <DependentUpon>AddExpenses.cs</DependentUpon>
