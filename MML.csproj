@@ -58,6 +58,7 @@
     <Compile Include="Life\MonthWork.Designer.cs">
       <DependentUpon>MonthWork.cs</DependentUpon>
     </Compile>
+    <Compile Include="Life\ToDo.cs" />
     <Compile Include="Money\AddExpenses.cs">
       <SubType>Form</SubType>
     </Compile>

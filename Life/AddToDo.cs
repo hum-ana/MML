@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace MML.Life
 {
@@ -13,7 +14,11 @@ namespace MML.Life
         {
             if (e.KeyCode == Keys.Enter)
             {
-                MonthWork.ToDos.Add(txtToDo.Text);
+                ToDo t = new ToDo();
+                t.Name = txtToDo.Text;
+                t.Done = false;
+                t.Date = DateTime.Now.ToString();
+                MonthWork.ToDos.Add(t);
                 this.Close();
             }
             else if (e.KeyCode == Keys.Escape)

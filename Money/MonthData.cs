@@ -27,7 +27,6 @@ namespace MML.Money
             this.Close();
         }
 
-
         public void PutData()
         {
             int y = 60;
